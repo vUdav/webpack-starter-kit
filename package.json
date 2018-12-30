@@ -4,6 +4,10 @@
   "description": "Webpack starter kit for markup: Pug, SCSS, JS (ES6), images (png, jpeg, webp, svg)",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "start": "webpack-dev-server --mode development --open",
     "test": "npm run test"
   },
   "repository": {
@@ -27,6 +31,9 @@
   },
   "homepage": "https://github.com/vUdav/webpack-starter-kit#readme",
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.4",
     "webpack": "^4.28.3",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.14"
