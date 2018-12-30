@@ -1,0 +1,34 @@
+{
+  "name": "webpack-starter-kit",
+  "version": "0.1.0",
+  "description": "Webpack starter kit for markup: Pug, SCSS, JS (ES6), images (png, jpeg, webp, svg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vUdav/webpack-starter-kit.git"
+  },
+  "keywords": [
+    "webpack",
+    "pug",
+    "scss",
+    "sass",
+    "js",
+    "es6",
+    "wepb",
+    "svg"
+  ],
+  "author": "Valery Liubimov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vUdav/webpack-starter-kit/issues"
+  },
+  "homepage": "https://github.com/vUdav/webpack-starter-kit#readme",
+  "devDependencies": {
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
