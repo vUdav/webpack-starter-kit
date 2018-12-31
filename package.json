@@ -1,0 +1,51 @@
+{
+  "name": "webpack-starter-kit",
+  "version": "0.1.0",
+  "description": "Webpack starter kit for markup: Pug, SCSS, JS (ES6), images (png, jpeg, webp, svg)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "start": "webpack-dev-server --mode development --open",
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vUdav/webpack-starter-kit.git"
+  },
+  "keywords": [
+    "webpack",
+    "pug",
+    "scss",
+    "sass",
+    "js",
+    "es6",
+    "wepb",
+    "svg"
+  ],
+  "author": "Valery Liubimov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vUdav/webpack-starter-kit/issues"
+  },
+  "homepage": "https://github.com/vUdav/webpack-starter-kit#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^2.1.0",
+    "cssnano": "^4.1.8",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "node-sass": "^4.11.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.5.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "normalize-scss": "^7.0.1"
+  }
+}
