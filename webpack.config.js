@@ -1,5 +1,8 @@
 const path = require("path");
+const glob = require("glob");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlBeautifyPlugin = require("html-beautify-webpack-plugin");
 
 module.exports = (env, options) => ({
   entry: ["./src/js/index.js", "./src/scss/style.scss"],
@@ -57,6 +60,12 @@ module.exports = (env, options) => ({
             }
           ]
         })
+      },
+
+      {
+        test: /\.pug$/,
+        include: path.join(__dirname, "src/view"),
+        loader: "pug-loader"
       }
     ]
   },
@@ -65,6 +74,27 @@ module.exports = (env, options) => ({
     new ExtractTextPlugin({
       filename: "./css/style.bundle.css",
       allChunks: true
+    }),
+
+    ...glob.sync("./src/view/*.pug").map(filePath => {
+      const name = path.parse(filePath).name;
+      return new HtmlWebpackPlugin({
+        template: `./${filePath}`,
+        filename: `${name}.html`
+      });
+    }),
+
+    new HtmlBeautifyPlugin({
+      config: {
+        html: {
+          indent_size: 2,
+          indent_inner_html: true,
+          end_with_newline: true,
+          preserve_newlines: true,
+          unformatted: ["p", "i", "b", "span"]
+        }
+      },
+      replace: [' type="text/javascript"']
     })
   ]
 });
